@@ -4,7 +4,7 @@ services:
   php-fpm:
     image: php:fpm-alpine
     volumes:
-      - ./src/kenh14.tk/www:/usr/share/nginx/awsmihome2612.tk/www
+      #- ./src/kenh14.tk/www:/usr/share/nginx/awsmihome2612.tk/www
       - ./src/data:/usr/share/nginx/data
     restart: always
   nginx:
@@ -12,14 +12,14 @@ services:
     volumes:
       - ./config/nginx.conf:/etc/nginx/nginx.conf
       - ./config/sites-conf/data.conf:/etc/nginx/sites-conf/data.conf
-      - ./config/sites-conf/kenh14.tk.conf:/etc/nginx/sites-conf/awsmihome2612.tk.conf
+      #- ./config/sites-conf/kenh14.tk.conf:/etc/nginx/sites-conf/awsmihome2612.tk.conf
       - ./src/data:/usr/share/nginx/data
-      - ./src/kenh14.tk/www:/usr/share/nginx/awsmihome2612.tk/www
+      #- ./src/kenh14.tk/www:/usr/share/nginx/awsmihome2612.tk/www
       # SSL certificates
-      - ./src/certificates:/etc/nginx/certificates
+      #- ./src/certificates:/etc/nginx/certificates
     ports:
-      - "80:80"
-      - "443:443"
+      #- "80:80"
+      #- "443:443"
       - "8080:8080"
     depends_on:
       - php-fpm
