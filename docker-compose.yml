@@ -14,6 +14,7 @@ services:
       - ./config/sites-conf/data.conf:/etc/nginx/sites-conf/data.conf
       #- ./config/sites-conf/kenh14.tk.conf:/etc/nginx/sites-conf/awsmihome2612.tk.conf
       - ./src/data:/usr/share/nginx/data
+      - ./src/data/share:/usr/share/nginx/data/share
       #- ./src/kenh14.tk/www:/usr/share/nginx/awsmihome2612.tk/www
       # SSL certificates
       #- ./src/certificates:/etc/nginx/certificates
